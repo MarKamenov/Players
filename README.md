@@ -13,4 +13,4 @@ We get different player depends on selected value.
 
 npm run sass Runs the Sass watcher.
 
-npm run start Runs index.html on the browser.
+npm run start Runs live-server.
