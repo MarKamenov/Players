@@ -1,0 +1,22 @@
+{
+  "name": "players",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "dsa"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "g": "^2.0.1",
+    "http-server": "^0.11.1",
+    "live-server": "^1.2.1",
+    "sass": "^1.20.3"
+  }
+}
