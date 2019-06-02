@@ -1,0 +1,101 @@
+$zero:0;
+$full-width:100%;
+$default-font-size:16px;
+$list-none:none;
+$select-bcg:#eaeaea;
+$footer-bcg:#ec0150;
+$stats-clr:#563d59;
+
+@mixin same-size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+body {
+	@include same-size($full-width);
+	margin: $zero;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: $zero;
+	padding: $zero;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+section {
+	width: 40%;
+}
+
+.select-wrapper {
+	background-color:$select-bcg;
+	position: relative;
+	select {
+		width: $full-width;
+		border: none;
+		font-size: 1rem;
+		padding: .8rem;
+		background-color: transparent;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		&:hover{
+			cursor: pointer;
+		}
+		&::-ms-expand {
+			display: none;
+		}
+	}
+	img {
+		width: 12px;
+		position: absolute;
+		right: .8rem;;
+		top: 40%;
+		z-index: 0;
+	}
+}
+.player-image {
+	margin-top: 1rem;
+	position: relative;
+	.circle-img {
+		background: url('../assets/badges_sprite.png');
+			position:absolute;
+			bottom: -3rem;
+    		right: 20px;
+			@include same-size(100px);
+			border-radius: 50%;
+			margin: 0 auto;
+			background-color: red;
+			font-size: 0.875rem;
+		}
+	
+}
+
+footer {
+	background-color: $footer-bcg;
+	padding: 20px;
+	h5, h3 {
+		color:$select-bcg;
+	}
+	h5 {
+		margin: 10px 0;
+	}
+}
+
+ul {
+	list-style-type: $list-none;
+	margin: $zero;
+	padding: $zero;
+	li {
+		background-color:$select-bcg;;
+		display: flex;
+		color:$stats-clr;
+		padding: .5rem;
+		font-weight: 700;
+		justify-content: space-between;
+		margin-top: 3px;
+	}
+}

@@ -1,0 +1,92 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+section {
+  width: 40%;
+}
+
+.select-wrapper {
+  background-color: #eaeaea;
+  position: relative;
+}
+.select-wrapper select {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  background-color: transparent;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.select-wrapper select:hover {
+  cursor: pointer;
+}
+.select-wrapper select::-ms-expand {
+  display: none;
+}
+.select-wrapper img {
+  width: 12px;
+  position: absolute;
+  right: 0.8rem;
+  top: 40%;
+  z-index: 0;
+}
+
+.player-image {
+  margin-top: 1rem;
+  position: relative;
+}
+.player-image .circle-img {
+  background: url("../assets/badges_sprite.png") -100px 0;
+  position: absolute;
+  bottom: -3rem;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: red;
+  font-size: 0.875rem;
+}
+
+footer {
+  background-color: #ec0150;
+  padding: 20px;
+}
+footer h5, footer h3 {
+  color: #eaeaea;
+}
+footer h5 {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  background-color: #eaeaea;
+  display: flex;
+  color: #563d59;
+  padding: 0.5rem;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
+/*# sourceMappingURL=styles.css.map */
