@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
  const fetchData = () => {
- return fetch('../data/player-stats.json').then(res=>res.json()).catch(error => console.error('Error:', error))
+ return fetch('./src/data/player-stats.json').then(res=>res.json()).catch(error => console.error('Error:', error))
 }
 
  const fetchSelectData = () => {
-  fetch('../data/player-stats.json').then(res=>res.json()).catch(error => console.error('Error:', error))
+  fetch('./src/data/player-stats.json').then(res=>res.json()).catch(error => console.error('Error:', error))
  .then(response => setSelect(selVal,response.players ));
 }
 
@@ -40,10 +40,8 @@ const setSelect = (sel,res) => {
              const {players} = res
              const selectedValue = val.value
              const data = players.find(item => item.player.id === Number(selectedValue))
-             console.log(data)
              const {player, stats} = data
              const bckPos = badgeImg(player.id)
-             console.log(bckPos)
              player.imgSrc = playerImg(player.id)
              badge.style.backgroundPosition = `${bckPos[0]}px ${bckPos[1]}px`
              h3.innerText = `${player.name.first}  ${player.name.last}`
@@ -76,15 +74,15 @@ const setSelect = (sel,res) => {
     const playerImg = (id) => {
 		switch (id) {
 			case 4916:
-				return './assets/p4916.png';
+				return './src/assets/p4916.png';
 			case 4148:
-				return  './assets/p4148.png';
+				return  './src/assets/p4148.png';
 			case 2064:
-				return  './assets/p2064.png';
+				return  './src/assets/p2064.png';
 			case 8983:
-				return  './assets/p8983.png';
+				return  './src/assets/p8983.png';
 			case 4246:
-				return  './assets/p4246.png';
+				return  './src/assets/p4246.png';
 			default:
 				 ''
 		}
